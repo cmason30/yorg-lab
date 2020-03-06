@@ -6,9 +6,9 @@ import pandas.io.sql as sqlio
 def insert_drug_sql(mouse_folder):
     try:
         connection = psycopg2.connect(user="postgres",
-                                      password="stefflab",
+                                      password="",
                                       host="localhost",
-                                      port="5432",
+                                      port="",
                                       database="mouse_practice")
         cursor = connection.cursor()
         sql_sel_query = "SELECT * FROM experiments WHERE mouse_id = {}".format(mouse_folder)
