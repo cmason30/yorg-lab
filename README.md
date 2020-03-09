@@ -2,5 +2,5 @@
 Data analysis work in Yorgason Lab
 
 
-# WARNING 
-DO NOT SET THE brn_file_iterations function to TRUE. It will truncate the wrong dataset if you don't know what you're doing. 
+# Exercise Caution
+The code connects to the database in many of the functions. Running certain parts of code could directly modify the tables on the cloud.
