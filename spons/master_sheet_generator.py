@@ -92,8 +92,7 @@ print(df2 != df1)
 
 # output of the function is a master sheet of Core
 
-# TODO: Make other columns as James requested
-# TODO: Iterate through all different spon excel files
+
 
 
 
