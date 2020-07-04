@@ -1,10 +1,4 @@
 import pandas as pd
-import numpy as np
-
-
-# df_path = df_path.columns[0]
-df = pd.read_excel(r'/Users/colinmason/Desktop/yorglab/spon_excel/CoreCocEticSpons.xlsx')
-#print(df.columns[0])
 
 
 def find_drug_applied(row):
@@ -78,19 +72,12 @@ df3 = master_sheet_maker(brain_region='DS', excel_file=r'/Users/colinmason/Deskt
 df4 = master_sheet_maker(brain_region='Shell', excel_file=r'/Users/colinmason/Desktop/yorglab/spon_excel/ShellCocEticSpons.xlsx', region_file='ShellCocEticSpons')
 df5 = master_sheet_maker(brain_region='NaN', excel_file=r'/Users/colinmason/Desktop/yorglab/spon_excel/female4AP_WIP.xlsx', region_file='Female4AP', fem=True)
 
-master_sheet = [df2, df3, df4, df5]
+master_sheet_final = [df2, df3, df4, df5]
 
-df_final = pd.concat(master_sheet)
+df_final = pd.concat(master_sheet_final)
 
 df_final.to_csv(r'/Users/colinmason/Desktop/yorglab/testwork/mastersheet9.csv')
 
-
-
-df1 = ['g', 'f', 'c']
-df2 = ['g', 'b', 'c']
-print(df2 != df1)
-
-# output of the function is a master sheet of Core
 
 
 
