@@ -2,6 +2,7 @@ spons <- read.csv('/Users/colinmason/Desktop/yorglab/coding work/spons_mastershe
 
 spons_sub_tau <- subset(spons, !is.na(spons$tau) & spons$tau > 0)
 spons_sub_tau$tau_log <- log(spons_sub_tau$tau)
+spons_control_sub <- subset(spons, spons$drug_applied == 'control')
 
 library(lattice)
 
@@ -20,6 +21,7 @@ boxplot(tau_log~region_name, data=spons_sub_tau)
 tau_mod_sex <- aov(tau~sex,data=spons_sub_tau)
 tau_mod_drug <- aov(tau~drug_applied, data=spons_sub_tau)
 tau_mod_region_name <- aov(tau~region_name, data=spons_sub_tau)
+
 anova(tau_mod_sex)
 anova(tau_mod_drug)
 anova(tau_mod_region_name)
@@ -27,6 +29,10 @@ anova(tau_mod_region_name)
 log_mod_sex <- aov(tau_log~sex, data=spons_sub_tau)
 log_mod_drug <- aov(tau_log~drug_applied, data=spons_sub_tau)
 log_mod_region <- aov(tau_log~region_name, data=spons_sub_tau)
+
+anova(log_mod_sex)
+anova(log_mod_drug)
+anova(log_mod_region)
 
 
 # Assumptions
